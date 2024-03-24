@@ -1,0 +1,35 @@
+# Mltiple Lines In Bash Shell run steps:
+
+1. create pipeline for multiple lines bash shell 
+
+2. slect pipeline for multiple lines bash shell --- then click ok
+
+3. create script pipeline for multiple lines bash shell 
+
+# Mltiple Lines In Bash Shell code:
+
+pipeline {
+    agent any 
+    stages {
+        stage("Demo") {
+            steps {
+                myFunc("Hello from the demo stage!")
+                sh """
+
+                """
+                
+            }
+        }   
+    }
+}
+
+def myFunc(String myText) {
+     echo "myText is set to: ${myText}"
+}
+
+
+4. click "Build" now
+
+
+
+

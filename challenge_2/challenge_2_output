@@ -1,0 +1,39 @@
+Started by user shital
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/challenge_2
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (stage 1)
+[Pipeline] echo
+hi form 1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (stage 2)
+[Pipeline] echo
+hi form 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (stage 3)
+[Pipeline] echo
+hi form 3
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (stage 4)
+[Pipeline] echo
+hi form 4
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (stage 5)
+[Pipeline] echo
+hi form 5
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

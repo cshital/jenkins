@@ -1,0 +1,842 @@
+einfochips@AHMLPT2509:~$ sudo apt install gnome-terminal
+[sudo] password for einfochips: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+gnome-terminal is already the newest version (3.36.2-1ubuntu1~20.04).
+gnome-terminal set to manually installed.
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi
+  libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+einfochips@AHMLPT2509:~$ sudo apt-get update
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease                         
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]        
+Hit:3 https://brave-browser-apt-release.s3.brave.com stable InRelease          
+Hit:4 https://packages.microsoft.com/ubuntu/20.04/prod focal InRelease         
+Hit:5 http://ppa.launchpad.net/umang/indicator-stickynotes/ubuntu focal InRelease
+Hit:6 https://packages.microsoft.com/repos/code stable InRelease              
+Hit:7 http://archive.canonical.com/ubuntu focal InRelease                     
+Hit:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Get:9 http://archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-security/universe Sources [225 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-security/universe amd64 Packages [950 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-security/universe i386 Packages [654 kB]
+Hit:13 http://dell.archive.canonical.com focal InRelease                       
+Fetched 2,056 kB in 16s (128 kB/s)                                             
+Reading package lists... Done
+W: Target Sources (main/source/Sources) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list:7
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
+einfochips@AHMLPT2509:~$  sudo apt-get install ./docker-desktop-<version>-<arch>.deb
+bash: version: No such file or directory
+einfochips@AHMLPT2509:~$ docker compose version
+
+Command 'docker' not found, but can be installed with:
+
+sudo snap install docker     # version 24.0.5, or
+sudo apt  install docker.io  # version 24.0.5-0ubuntu1~20.04.1
+
+See 'snap info docker' for additional versions.
+
+einfochips@AHMLPT2509:~$ systemctl --user start docker-desktop
+Failed to start docker-desktop.service: Unit docker-desktop.service not found.
+einfochips@AHMLPT2509:~$ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'docker.io' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'docker-doc' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'docker-compose' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'docker-compose-v2' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package podman-docker
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'containerd' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'runc' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+einfochips@AHMLPT2509:~$ sudo apt-get update
+Hit:1 http://archive.canonical.com/ubuntu focal InRelease           
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease              
+Hit:3 https://packages.microsoft.com/ubuntu/20.04/prod focal InRelease
+Hit:4 https://packages.microsoft.com/repos/code stable InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu focal-security InRelease
+Hit:8 https://brave-browser-apt-release.s3.brave.com stable InRelease                                                                        
+Hit:9 http://dell.archive.canonical.com focal InRelease                                                                                      
+Hit:10 http://ppa.launchpad.net/umang/indicator-stickynotes/ubuntu focal InRelease
+Reading package lists... Done
+W: Target Sources (main/source/Sources) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list:7
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
+W: Target Sources (main/source/Sources) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list:7
+einfochips@AHMLPT2509:~$ sudo apt-get install ca-certificates curl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ca-certificates is already the newest version (20230311ubuntu0.20.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.68.0-1ubuntu2.21).
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+einfochips@AHMLPT2509:~$ sudo install -m 0755 -d /etc/apt/keyrings
+einfochips@AHMLPT2509:~$ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+einfochips@AHMLPT2509:~$ sudo chmod a+r /etc/apt/keyrings/docker.asc
+einfochips@AHMLPT2509:~$ sudo chmod a+r /etc/apt/keyrings/docker.asc
+einfochips@AHMLPT2509:~$ echo \
+> "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+>   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+>   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+einfochips@AHMLPT2509:~$ sudo apt-get update
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease                                                                                       
+Get:2 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]                                                                     
+Hit:3 https://packages.microsoft.com/ubuntu/20.04/prod focal InRelease                                                                       
+Hit:4 https://packages.microsoft.com/repos/code stable InRelease                                                                             
+Get:5 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [38.8 kB]                                                         
+Hit:6 http://archive.ubuntu.com/ubuntu focal-updates InRelease                                                                               
+Hit:7 http://ppa.launchpad.net/umang/indicator-stickynotes/ubuntu focal InRelease                                                            
+Hit:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease                                                                             
+Hit:9 http://archive.ubuntu.com/ubuntu focal-security InRelease                                                                              
+Hit:10 http://dell.archive.canonical.com focal InRelease                                                                                     
+Hit:11 http://archive.canonical.com/ubuntu focal InRelease                                                                                   
+Err:12 https://brave-browser-apt-release.s3.brave.com stable InRelease                                                                       
+  Temporary failure resolving 'brave-browser-apt-release.s3.brave.com'
+Fetched 96.4 kB in 15s (6,380 B/s)                       
+Reading package lists... Done
+W: Target Sources (main/source/Sources) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list:7
+W: Failed to fetch https://brave-browser-apt-release.s3.brave.com/dists/stable/InRelease  Temporary failure resolving 'brave-browser-apt-release.s3.brave.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+W: Target Sources (main/source/Sources) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list:7
+einfochips@AHMLPT2509:~$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  docker-ce-rootless-extras git git-man liberror-perl pigz slirp4netns
+Suggested packages:
+  aufs-tools cgroupfs-mount | cgroup-lite git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs
+  git-mediawiki git-svn
+The following NEW packages will be installed:
+  containerd.io docker-buildx-plugin docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin git git-man liberror-perl pigz
+  slirp4netns
+0 upgraded, 11 newly installed, 0 to remove and 93 not upgraded.
+Need to get 124 MB of archives.
+After this operation, 463 MB of additional disk space will be used.
+Do you want to continue? [Y/n] sudo docker run hello-world
+Abort.
+einfochips@AHMLPT2509:~$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  docker-ce-rootless-extras git git-man liberror-perl pigz slirp4netns
+Suggested packages:
+  aufs-tools cgroupfs-mount | cgroup-lite git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs
+  git-mediawiki git-svn
+The following NEW packages will be installed:
+  containerd.io docker-buildx-plugin docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin git git-man liberror-perl pigz
+  slirp4netns
+0 upgraded, 11 newly installed, 0 to remove and 93 not upgraded.
+Need to get 124 MB of archives.
+After this operation, 463 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.6.28-1 [29.6 MB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.11 [887 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.11 [4,605 kB]                                    
+Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 slirp4netns amd64 0.4.3-1 [74.3 kB]                                              
+Get:7 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-buildx-plugin amd64 0.13.0-1~ubuntu.20.04~focal [29.5 MB]           
+Get:8 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-cli amd64 5:25.0.4-1~ubuntu.20.04~focal [13.7 MB]                
+Get:9 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:25.0.4-1~ubuntu.20.04~focal [24.3 MB]                    
+Get:10 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-rootless-extras amd64 5:25.0.4-1~ubuntu.20.04~focal [9,327 kB]  
+Get:11 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-compose-plugin amd64 2.24.7-1~ubuntu.20.04~focal [12.1 MB]         
+Fetched 124 MB in 6min 30s (319 kB/s)                                                                                                        
+Selecting previously unselected package pigz.
+(Reading database ... 185268 files and directories currently installed.)
+Preparing to unpack .../00-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../01-containerd.io_1.6.28-1_amd64.deb ...
+Unpacking containerd.io (1.6.28-1) ...
+Selecting previously unselected package docker-buildx-plugin.
+Preparing to unpack .../02-docker-buildx-plugin_0.13.0-1~ubuntu.20.04~focal_amd64.deb ...
+Unpacking docker-buildx-plugin (0.13.0-1~ubuntu.20.04~focal) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../03-docker-ce-cli_5%3a25.0.4-1~ubuntu.20.04~focal_amd64.deb ...
+Unpacking docker-ce-cli (5:25.0.4-1~ubuntu.20.04~focal) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../04-docker-ce_5%3a25.0.4-1~ubuntu.20.04~focal_amd64.deb ...
+Unpacking docker-ce (5:25.0.4-1~ubuntu.20.04~focal) ...
+Selecting previously unselected package docker-ce-rootless-extras.
+Preparing to unpack .../05-docker-ce-rootless-extras_5%3a25.0.4-1~ubuntu.20.04~focal_amd64.deb ...
+Unpacking docker-ce-rootless-extras (5:25.0.4-1~ubuntu.20.04~focal) ...
+Selecting previously unselected package docker-compose-plugin.
+Preparing to unpack .../06-docker-compose-plugin_2.24.7-1~ubuntu.20.04~focal_amd64.deb ...
+Unpacking docker-compose-plugin (2.24.7-1~ubuntu.20.04~focal) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../07-liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../08-git-man_1%3a2.25.1-1ubuntu3.11_all.deb ...
+Unpacking git-man (1:2.25.1-1ubuntu3.11) ...
+Selecting previously unselected package git.
+Preparing to unpack .../09-git_1%3a2.25.1-1ubuntu3.11_amd64.deb ...
+Unpacking git (1:2.25.1-1ubuntu3.11) ...
+Selecting previously unselected package slirp4netns.
+Preparing to unpack .../10-slirp4netns_0.4.3-1_amd64.deb ...
+Unpacking slirp4netns (0.4.3-1) ...
+Setting up slirp4netns (0.4.3-1) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up docker-buildx-plugin (0.13.0-1~ubuntu.20.04~focal) ...
+Setting up containerd.io (1.6.28-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker-compose-plugin (2.24.7-1~ubuntu.20.04~focal) ...
+Setting up docker-ce-cli (5:25.0.4-1~ubuntu.20.04~focal) ...
+Setting up pigz (2.4-1) ...
+Setting up git-man (1:2.25.1-1ubuntu3.11) ...
+Setting up docker-ce-rootless-extras (5:25.0.4-1~ubuntu.20.04~focal) ...
+Setting up docker-ce (5:25.0.4-1~ubuntu.20.04~focal) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Setting up git (1:2.25.1-1ubuntu3.11) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.20) ...
+einfochips@AHMLPT2509:~$ docker --version
+Docker version 25.0.4, build 1a576c5
+einfochips@AHMLPT2509:~$ sudo docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+c1ec31eb5944: Pull complete 
+Digest: sha256:6352af1ab4ba4b138648f8ee88e63331aae519946d3b67dae50c313c6fc8200f
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+einfochips@AHMLPT2509:~$ sudo service docker start
+einfochips@AHMLPT2509:~$ sudo service docker status
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-03-18 11:17:10 IST; 2min 54s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 12504 (dockerd)
+      Tasks: 13
+     Memory: 35.1M
+     CGroup: /system.slice/docker.service
+             └─12504 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Mar 18 11:17:09 AHMLPT2509 systemd[1]: Starting Docker Application Container Engine...
+Mar 18 11:17:09 AHMLPT2509 dockerd[12504]: time="2024-03-18T11:17:09.885757703+05:30" level=info msg="Starting up"
+Mar 18 11:17:09 AHMLPT2509 dockerd[12504]: time="2024-03-18T11:17:09.886436915+05:30" level=info msg="detected 127.0.0.53 nameserver, assumin>
+Mar 18 11:17:09 AHMLPT2509 dockerd[12504]: time="2024-03-18T11:17:09.936314035+05:30" level=info msg="Loading containers: start."
+Mar 18 11:17:10 AHMLPT2509 dockerd[12504]: time="2024-03-18T11:17:10.078609032+05:30" level=info msg="Loading containers: done."
+Mar 18 11:17:10 AHMLPT2509 dockerd[12504]: time="2024-03-18T11:17:10.095031493+05:30" level=info msg="Docker daemon" commit=061aa95 container>
+Mar 18 11:17:10 AHMLPT2509 dockerd[12504]: time="2024-03-18T11:17:10.095142011+05:30" level=info msg="Daemon has completed initialization"
+Mar 18 11:17:10 AHMLPT2509 dockerd[12504]: time="2024-03-18T11:17:10.117458108+05:30" level=info msg="API listen on /run/docker.sock"
+Mar 18 11:17:10 AHMLPT2509 systemd[1]: Started Docker Application Container Engine.
+Mar 18 11:18:34 AHMLPT2509 dockerd[12504]: time="2024-03-18T11:18:34.687864117+05:30" level=info msg="ignoring event" container=7c8c11b938560>
+
+[1]+  Stopped                 sudo service docker status
+einfochips@AHMLPT2509:~$ ^C
+einfochips@AHMLPT2509:~$ sudo docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+einfochips@AHMLPT2509:~$ git clone  git clone https://github.com/docker/getting-started-app.git
+fatal: Too many arguments.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recursive ...       alias of --recurse-submodules
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+
+einfochips@AHMLPT2509:~$ git clone  git clone https://github.com/docker/getting-started-app.git
+fatal: Too many arguments.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recursive ...       alias of --recurse-submodules
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+
+einfochips@AHMLPT2509:~$  git clone https://github.com/docker/getting-started-app.git
+Cloning into 'getting-started-app'...
+remote: Enumerating objects: 68, done.
+remote: Counting objects: 100% (37/37), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 68 (delta 12), reused 10 (delta 10), pack-reused 31
+Unpacking objects: 100% (68/68), 1.75 MiB | 338.00 KiB/s, done.
+einfochips@AHMLPT2509:~$ ls
+Desktop  Documents  Downloads  getting-started-app  install.sh  Music  Pictures  Public  snap  Templates  udemy-course  Videos
+einfochips@AHMLPT2509:~$ docker images
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": dial unix /var/run/docker.sock: connect: permission denied
+einfochips@AHMLPT2509:~$ cd /path/to/getting-started-app
+bash: cd: /path/to/getting-started-app: No such file or directory
+einfochips@AHMLPT2509:~$ 
+
+
+einfochips@AHMLPT2509:~$ sudo docker run -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk17
+[sudo] password for einfochips: 
+docker: Error response from daemon: driver failed programming external connectivity on endpoint festive_banach (3d0da93b9bad6acf89e93b0b85f112ea3925363d4861e0f6eff53b0952a218d3): Bind for 0.0.0.0:50000 failed: port is already allocated.
+ERRO[0000] error waiting for container: context canceled 
+einfochips@AHMLPT2509:~$ sudo docker run -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk17
+docker: Error response from daemon: driver failed programming external connectivity on endpoint quirky_rhodes (fc49f4ef7eedb034bc62f79a37e30cbffc3ad2031d74a4cb91de2dc2351ec264): Bind for 0.0.0.0:50000 failed: port is already allocated.
+ERRO[0000] error waiting for container: context canceled 
+einfochips@AHMLPT2509:~$ sudo systemctl start  jenkins
+Failed to start jenkins.service: Unit jenkins.service not found.
+einfochips@AHMLPT2509:~$ sudo service docker restart 
+einfochips@AHMLPT2509:~$ sudo docker run -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk17
+docker: Error response from daemon: driver failed programming external connectivity on endpoint cranky_kilby (3b73bfe4ab0142600ebe27b6cd79f0ec4dc75198a9373e56703221f62ebf0c3a): Bind for 0.0.0.0:50000 failed: port is already allocated.
+ERRO[0000] error waiting for container: context canceled 
+einfochips@AHMLPT2509:~$ sudo netstat -tuln | grep 50000
+sudo: netstat: command not found
+einfochips@AHMLPT2509:~$ sudo lsof -i :50000
+COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+docker-pr 6153 root    4u  IPv4  98657      0t0  TCP *:50000 (LISTEN)
+docker-pr 6164 root    4u  IPv6  97961      0t0  TCP *:50000 (LISTEN)
+einfochips@AHMLPT2509:~$ sudo docker run -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk17
+docker: Error response from daemon: driver failed programming external connectivity on endpoint laughing_matsumoto (b605581e590ea3253f0436f8f966df322bf513d98ef64c259ab8f8e4a7fd9e95): Bind for 0.0.0.0:50000 failed: port is already allocated.
+ERRO[0000] error waiting for container: context canceled 
+einfochips@AHMLPT2509:~$ sudo nano docker-compose.yml
+einfochips@AHMLPT2509:~$ cat docker-compose.yml 
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - jenkins-net
+volumes:
+  jenkins_home:
+networks:
+  jenkins-net:
+einfochips@AHMLPT2509:~$ docker-compose up -d
+
+Command 'docker-compose' not found, but can be installed with:
+
+sudo snap install docker          # version 24.0.5, or
+sudo apt  install docker-compose  # version 1.25.0-1
+
+See 'snap info docker' for additional versions.
+
+einfochips@AHMLPT2509:~$ sudo apt update
+Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
+Hit:2 https://packages.microsoft.com/ubuntu/20.04/prod focal InRelease                                                                       
+Hit:3 https://packages.microsoft.com/repos/code stable InRelease                                                                             
+Hit:4 https://brave-browser-apt-release.s3.brave.com stable InRelease                                                                        
+Hit:5 http://archive.ubuntu.com/ubuntu focal InRelease                                                                                       
+Hit:6 http://ppa.launchpad.net/umang/indicator-stickynotes/ubuntu focal InRelease                                                            
+Hit:7 http://dell.archive.canonical.com focal InRelease                                   
+Hit:8 http://archive.ubuntu.com/ubuntu focal-updates InRelease      
+Hit:9 http://archive.canonical.com/ubuntu focal InRelease
+Hit:10 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:11 http://archive.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+93 packages can be upgraded. Run 'apt list --upgradable' to see them.
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
+W: Target Sources (main/source/Sources) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list:7
+W: Target Sources (main/source/Sources) is configured multiple times in /etc/apt/sources.list:2 and /etc/apt/sources.list:7
+einfochips@AHMLPT2509:~$ sudo apt install docker-compose
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  python3-attr python3-cached-property python3-distutils python3-docker python3-dockerpty python3-docopt python3-importlib-metadata
+  python3-jsonschema python3-more-itertools python3-pyrsistent python3-setuptools python3-texttable python3-websocket python3-zipp
+Suggested packages:
+  python-attr-doc python-jsonschema-doc python-setuptools-doc
+Recommended packages:
+  docker.io
+The following NEW packages will be installed:
+  docker-compose python3-attr python3-cached-property python3-distutils python3-docker python3-dockerpty python3-docopt
+  python3-importlib-metadata python3-jsonschema python3-more-itertools python3-pyrsistent python3-setuptools python3-texttable
+  python3-websocket python3-zipp
+0 upgraded, 15 newly installed, 0 to remove and 93 not upgraded.
+Need to get 916 kB of archives.
+After this operation, 5,437 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-cached-property all 1.5.1-4 [10.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-websocket all 0.53.0-2ubuntu1 [32.3 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-docker all 4.1.0-1 [83.8 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-dockerpty all 0.4.1-2 [11.1 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-docopt all 0.6.2-2.2ubuntu1 [19.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-attr all 19.3.0-2 [33.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-distutils all 3.8.10-0ubuntu1~20.04 [141 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-setuptools all 45.2.0-1ubuntu0.1 [330 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-more-itertools all 4.2.0-1build1 [39.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-zipp all 1.0.0-1 [5,312 B]
+Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-importlib-metadata all 1.5.0-1 [9,992 B]
+Get:12 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-pyrsistent amd64 0.15.5-1build1 [52.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-jsonschema all 3.2.0-0ubuntu2 [43.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-texttable all 1.6.2-2 [11.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal/universe amd64 docker-compose all 1.25.0-1 [92.7 kB]
+Fetched 916 kB in 4s (239 kB/s)         
+Selecting previously unselected package python3-cached-property.
+(Reading database ... 186457 files and directories currently installed.)
+Preparing to unpack .../00-python3-cached-property_1.5.1-4_all.deb ...
+Unpacking python3-cached-property (1.5.1-4) ...
+Selecting previously unselected package python3-websocket.
+Preparing to unpack .../01-python3-websocket_0.53.0-2ubuntu1_all.deb ...
+Unpacking python3-websocket (0.53.0-2ubuntu1) ...
+Selecting previously unselected package python3-docker.
+Preparing to unpack .../02-python3-docker_4.1.0-1_all.deb ...
+Unpacking python3-docker (4.1.0-1) ...
+Selecting previously unselected package python3-dockerpty.
+Preparing to unpack .../03-python3-dockerpty_0.4.1-2_all.deb ...
+Unpacking python3-dockerpty (0.4.1-2) ...
+Selecting previously unselected package python3-docopt.
+Preparing to unpack .../04-python3-docopt_0.6.2-2.2ubuntu1_all.deb ...
+Unpacking python3-docopt (0.6.2-2.2ubuntu1) ...
+Selecting previously unselected package python3-attr.
+Preparing to unpack .../05-python3-attr_19.3.0-2_all.deb ...
+Unpacking python3-attr (19.3.0-2) ...
+Selecting previously unselected package python3-distutils.
+Preparing to unpack .../06-python3-distutils_3.8.10-0ubuntu1~20.04_all.deb ...
+Unpacking python3-distutils (3.8.10-0ubuntu1~20.04) ...
+Selecting previously unselected package python3-setuptools.
+Preparing to unpack .../07-python3-setuptools_45.2.0-1ubuntu0.1_all.deb ...
+Unpacking python3-setuptools (45.2.0-1ubuntu0.1) ...
+Selecting previously unselected package python3-more-itertools.
+Preparing to unpack .../08-python3-more-itertools_4.2.0-1build1_all.deb ...
+Unpacking python3-more-itertools (4.2.0-1build1) ...
+Selecting previously unselected package python3-zipp.
+Preparing to unpack .../09-python3-zipp_1.0.0-1_all.deb ...
+Unpacking python3-zipp (1.0.0-1) ...
+Selecting previously unselected package python3-importlib-metadata.
+Preparing to unpack .../10-python3-importlib-metadata_1.5.0-1_all.deb ...
+Unpacking python3-importlib-metadata (1.5.0-1) ...
+Selecting previously unselected package python3-pyrsistent:amd64.
+Preparing to unpack .../11-python3-pyrsistent_0.15.5-1build1_amd64.deb ...
+Unpacking python3-pyrsistent:amd64 (0.15.5-1build1) ...
+Selecting previously unselected package python3-jsonschema.
+Preparing to unpack .../12-python3-jsonschema_3.2.0-0ubuntu2_all.deb ...
+Unpacking python3-jsonschema (3.2.0-0ubuntu2) ...
+Selecting previously unselected package python3-texttable.
+Preparing to unpack .../13-python3-texttable_1.6.2-2_all.deb ...
+Unpacking python3-texttable (1.6.2-2) ...
+Selecting previously unselected package docker-compose.
+Preparing to unpack .../14-docker-compose_1.25.0-1_all.deb ...
+Unpacking docker-compose (1.25.0-1) ...
+Setting up python3-distutils (3.8.10-0ubuntu1~20.04) ...
+Setting up python3-cached-property (1.5.1-4) ...
+Setting up python3-more-itertools (4.2.0-1build1) ...
+Setting up python3-attr (19.3.0-2) ...
+Setting up python3-texttable (1.6.2-2) ...
+Setting up python3-docopt (0.6.2-2.2ubuntu1) ...
+Setting up python3-setuptools (45.2.0-1ubuntu0.1) ...
+Setting up python3-zipp (1.0.0-1) ...
+Setting up python3-pyrsistent:amd64 (0.15.5-1build1) ...
+Setting up python3-websocket (0.53.0-2ubuntu1) ...
+update-alternatives: using /usr/bin/python3-wsdump to provide /usr/bin/wsdump (wsdump) in auto mode
+Setting up python3-dockerpty (0.4.1-2) ...
+Setting up python3-importlib-metadata (1.5.0-1) ...
+Setting up python3-docker (4.1.0-1) ...
+Setting up python3-jsonschema (3.2.0-0ubuntu2) ...
+Setting up docker-compose (1.25.0-1) ...
+Processing triggers for man-db (2.9.1-1) ...
+einfochips@AHMLPT2509:~$ docker-compose --version
+docker-compose version 1.25.0, build unknown
+einfochips@AHMLPT2509:~$ docker-compose up -d
+ERROR: Couldn't connect to Docker daemon at http+docker://localhost - is it running?
+
+If it's at a non-standard location, specify the URL with the DOCKER_HOST environment variable.
+einfochips@AHMLPT2509:~$ sudo systemctl start docker
+einfochips@AHMLPT2509:~$ docker info
+Client: Docker Engine - Community
+ Version:    25.0.4
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.13.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.24.7
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ERROR: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.44/info": dial unix /var/run/docker.sock: connect: permission denied
+errors pretty printing info
+einfochips@AHMLPT2509:~$ sudo usermod -aG docker $USER
+einfochips@AHMLPT2509:~$ docker-compose up -d
+ERROR: Couldn't connect to Docker daemon at http+docker://localhost - is it running?
+
+If it's at a non-standard location, specify the URL with the DOCKER_HOST environment variable.
+einfochips@AHMLPT2509:~$ systemctl status docker
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-03-18 15:56:34 IST; 13min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 5994 (dockerd)
+      Tasks: 49
+     Memory: 37.8M
+     CGroup: /system.slice/docker.service
+             ├─5994 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─6153 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 50000 -container-ip 172.17.0.3 -container-port 50000
+             ├─6164 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 50000 -container-ip 172.17.0.3 -container-port 50000
+             ├─6191 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8080 -container-ip 172.17.0.3 -container-port 8080
+             └─6198 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 8080 -container-ip 172.17.0.3 -container-port 8080
+
+Mar 18 15:56:34 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:56:34.399500890+05:30" level=error msg="failed to start container" container=ca>
+Mar 18 15:56:34 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:56:34.496629683+05:30" level=info msg="Loading containers: done."
+Mar 18 15:56:34 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:56:34.503134493+05:30" level=info msg="Docker daemon" commit=061aa95 containerd>
+Mar 18 15:56:34 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:56:34.503193707+05:30" level=info msg="Daemon has completed initialization"
+Mar 18 15:56:34 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:56:34.522039584+05:30" level=info msg="API listen on /run/docker.sock"
+Mar 18 15:56:34 AHMLPT2509 systemd[1]: Started Docker Application Container Engine.
+Mar 18 15:56:37 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:56:37.936181272+05:30" level=warning msg="Failed to allocate and map port 50000>
+Mar 18 15:56:38 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:56:38.078906706+05:30" level=error msg="Handler for POST /v1.44/containers/43ee>
+Mar 18 15:57:42 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:57:42.510172059+05:30" level=warning msg="Failed to allocate and map port 50000>
+Mar 18 15:57:42 AHMLPT2509 dockerd[5994]: time="2024-03-18T15:57:42.583896601+05:30" level=error msg="Handler for POST /v1.44/containers/1b56>
+
+einfochips@AHMLPT2509:~$ sudo systemctl start docker
+einfochips@AHMLPT2509:~$ sudo usermod -aG docker $USER
+einfochips@AHMLPT2509:~$ docker ps
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.44/containers/json": dial unix /var/run/docker.sock: connect: permission denied
+einfochips@AHMLPT2509:~$ docker-compose up -d 
+ERROR: Couldn't connect to Docker daemon at http+docker://localhost - is it running?
+
+If it's at a non-standard location, specify the URL with the DOCKER_HOST environment variable.
+einfochips@AHMLPT2509:~$ sudo docker-compose up -d
+Creating network "einfochips_jenkins-net" with the default driver
+Creating volume "einfochips_jenkins_home" with default driver
+Pulling jenkins (jenkins/jenkins:lts)...
+lts: Pulling from jenkins/jenkins
+Digest: sha256:01c0b0cf789fa24253090fccea264df223b5e09b14a0ea59f0847c70bdc0f31c
+Status: Downloaded newer image for jenkins/jenkins:lts
+Creating jenkins ... 
+Creating jenkins ... error
+
+ERROR: for jenkins  Cannot start service jenkins: driver failed programming external connectivity on endpoint jenkins (0f3c51bc43d8817bab6a5274ccbe84b6ceabc40eb2b5c514e136e2c538783e48): Bind for 0.0.0.0:8080 failed: port is already allocated
+
+ERROR: for jenkins  Cannot start service jenkins: driver failed programming external connectivity on endpoint jenkins (0f3c51bc43d8817bab6a5274ccbe84b6ceabc40eb2b5c514e136e2c538783e48): Bind for 0.0.0.0:8080 failed: port is already allocated
+ERROR: Encountered errors while bringing up the project.
+einfochips@AHMLPT2509:~$ sudo usermod -aG docker $USER
+einfochips@AHMLPT2509:~$ sudo chown $USER:$USER /var/run/docker.sock
+einfochips@AHMLPT2509:~$ sudo chmod 666 /var/run/docker.sock
+einfochips@AHMLPT2509:~$ sudo docker-compose up -d
+Starting jenkins ... 
+Starting jenkins ... error
+
+ERROR: for jenkins  Cannot start service jenkins: driver failed programming external connectivity on endpoint jenkins (433b58172f374f54815d028c8359eea784acb8b37c2d362c2211a4fd3035d97a): Bind for 0.0.0.0:8080 failed: port is already allocated
+
+ERROR: for jenkins  Cannot start service jenkins: driver failed programming external connectivity on endpoint jenkins (433b58172f374f54815d028c8359eea784acb8b37c2d362c2211a4fd3035d97a): Bind for 0.0.0.0:8080 failed: port is already allocated
+ERROR: Encountered errors while bringing up the project.
+einfochips@AHMLPT2509:~$ sudo netstat -tuln | grep 8080
+sudo: netstat: command not found
+einfochips@AHMLPT2509:~$ ls
+Desktop             Documents  getting-started-app  Music     Public  Templates     Videos
+docker-compose.yml  Downloads  install.sh           Pictures  snap    udemy-course
+einfochips@AHMLPT2509:~$ sudo rm -rf docker-compose.yml 
+einfochips@AHMLPT2509:~$ sudo nano docker-compose.yml
+
+
+Use "fg" to return to nano.
+
+[1]+  Stopped                 sudo nano docker-compose.yml
+einfochips@AHMLPT2509:~$ cat docker-compose.yml 
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8081:8080"  # Change the host port to 8081 or any other available port
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - jenkins-net
+volumes:
+  jenkins_home:
+networks:
+  jenkins-net:
+einfochips@AHMLPT2509:~$ sudo docker-compose up -d
+Recreating jenkins ... done
+einfochips@AHMLPT2509:~$ docker-compose logs jenkins
+Attaching to jenkins
+jenkins    | Running from: /usr/share/jenkins/jenkins.war
+jenkins    | webroot: /var/jenkins_home/war
+jenkins    | 2024-03-18 10:44:25.041+0000 [id=1]  INFO  winstone.Logger#logInternal: Beginning extraction from war file
+jenkins    | 2024-03-18 10:44:25.908+0000 [id=1]  WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+jenkins    | 2024-03-18 10:44:25.964+0000 [id=1]  INFO  org.eclipse.jetty.server.Server#doStart: jetty-10.0.18; built: 2023-10-27T01:59:58.245Z; git: 8545fd9bf4cd0d0838f626b405fd4963441546b7; jvm 17.0.10+7
+jenkins    | 2024-03-18 10:44:26.177+0000 [id=1]  INFO  o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+jenkins    | 2024-03-18 10:44:26.218+0000 [id=1]  INFO  o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins    | 2024-03-18 10:44:26.782+0000 [id=1]  INFO  hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins    | 2024-03-18 10:44:26.914+0000 [id=1]  INFO  o.e.j.s.handler.ContextHandler#doStart: Started w.@4d192aef{Jenkins v2.440.1,/,file:///var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+jenkins    | 2024-03-18 10:44:26.926+0000 [id=1]  INFO  o.e.j.server.AbstractConnector#doStart: Started ServerConnector@78365cfa{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins    | 2024-03-18 10:44:26.936+0000 [id=1]  INFO  org.eclipse.jetty.server.Server#doStart: Started Server@5644dc81{STARTING}[10.0.18,sto=0] @2356ms
+jenkins    | 2024-03-18 10:44:26.940+0000 [id=27] INFO  winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins    | 2024-03-18 10:44:27.131+0000 [id=35] INFO  jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins    | 2024-03-18 10:44:27.150+0000 [id=38] INFO  jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins    | 2024-03-18 10:44:27.916+0000 [id=39] INFO  jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins    | 2024-03-18 10:44:27.920+0000 [id=45] INFO  jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins    | 2024-03-18 10:44:27.924+0000 [id=45] INFO  jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins    | 2024-03-18 10:44:28.101+0000 [id=44] INFO  jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins    | 2024-03-18 10:44:28.102+0000 [id=42] INFO  jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins    | 2024-03-18 10:44:28.102+0000 [id=42] INFO  jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins    | 2024-03-18 10:44:28.104+0000 [id=42] INFO  jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins    | 2024-03-18 10:44:28.125+0000 [id=61] INFO  hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+jenkins    | 2024-03-18 10:44:28.567+0000 [id=48] INFO  jenkins.install.SetupWizard#init: 
+jenkins    | 
+jenkins    | *************************************************************
+jenkins    | *************************************************************
+jenkins    | *************************************************************
+jenkins    | 
+jenkins    | Jenkins initial setup is required. An admin user has been created and a password generated.
+jenkins    | Please use the following password to proceed to installation:
+jenkins    | 
+jenkins    | 55c8b5a34e5b457aa661280df4a1dcbd
+jenkins    | 
+jenkins    | This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+jenkins    | 
+jenkins    | *************************************************************
+jenkins    | *************************************************************
+jenkins    | *************************************************************
+jenkins    | 
+jenkins    | 2024-03-18 10:44:57.007+0000 [id=48] INFO  jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins    | 2024-03-18 10:44:57.023+0000 [id=26] INFO  hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins    | 2024-03-18 10:45:02.375+0000 [id=61] INFO  h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins    | 2024-03-18 10:45:02.375+0000 [id=61] INFO  hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+einfochips@AHMLPT2509:~$ ^C
+einfochips@AHMLPT2509:~$ 
+
+
+
+
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ sudo docker-compose up -d
+Creating jenkins ... done
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ sudo docker ps
+CONTAINER ID   IMAGE                 COMMAND                  CREATED         STATUS         PORTS                                                                                      NAMES
+d2efe275cf3b   jenkins/jenkins:lts   "/usr/bin/tini -- /u…"   9 seconds ago   Up 8 seconds   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 0.0.0.0:50000->50000/tcp, :::50000->50000/tcp   jenkins
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ docker logs jenkins 
+Running from: /usr/share/jenkins/jenkins.war
+webroot: /var/jenkins_home/war
+2024-03-18 11:09:34.428+0000 [id=1] INFO  winstone.Logger#logInternal: Beginning extraction from war file
+2024-03-18 11:09:35.160+0000 [id=1] WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2024-03-18 11:09:35.205+0000 [id=1] INFO  org.eclipse.jetty.server.Server#doStart: jetty-10.0.18; built: 2023-10-27T01:59:58.245Z; git: 8545fd9bf4cd0d0838f626b405fd4963441546b7; jvm 17.0.10+7
+2024-03-18 11:09:35.376+0000 [id=1] INFO  o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2024-03-18 11:09:35.409+0000 [id=1] INFO  o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2024-03-18 11:09:35.826+0000 [id=1] INFO  hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2024-03-18 11:09:35.935+0000 [id=1] INFO  o.e.j.s.handler.ContextHandler#doStart: Started w.@4d192aef{Jenkins v2.440.1,/,file:///var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+2024-03-18 11:09:35.946+0000 [id=1] INFO  o.e.j.server.AbstractConnector#doStart: Started ServerConnector@78365cfa{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2024-03-18 11:09:35.955+0000 [id=1] INFO  org.eclipse.jetty.server.Server#doStart: Started Server@5644dc81{STARTING}[10.0.18,sto=0] @1896ms
+2024-03-18 11:09:35.956+0000 [id=27]  INFO  winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2024-03-18 11:09:36.149+0000 [id=35]  INFO  jenkins.InitReactorRunner$1#onAttained: Started initialization
+2024-03-18 11:09:36.171+0000 [id=41]  INFO  jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2024-03-18 11:09:36.782+0000 [id=44]  INFO  jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2024-03-18 11:09:36.785+0000 [id=44]  INFO  jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2024-03-18 11:09:36.789+0000 [id=38]  INFO  jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2024-03-18 11:09:36.916+0000 [id=38]  INFO  jenkins.InitReactorRunner$1#onAttained: System config loaded
+2024-03-18 11:09:36.916+0000 [id=46]  INFO  jenkins.InitReactorRunner$1#onAttained: System config adapted
+2024-03-18 11:09:36.917+0000 [id=42]  INFO  jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2024-03-18 11:09:36.918+0000 [id=42]  INFO  jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2024-03-18 11:09:36.932+0000 [id=61]  INFO  hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2024-03-18 11:09:37.265+0000 [id=45]  INFO  jenkins.install.SetupWizard#init: 
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+ac78e56ec8c841089cb51bf06e8f158f
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ 
+
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ docker ps
+CONTAINER ID   IMAGE                 COMMAND                  CREATED          STATUS          PORTS                                                                                      NAMES
+d2efe275cf3b   jenkins/jenkins:lts   "/usr/bin/tini -- /u…"   12 minutes ago   Up 11 minutes   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 0.0.0.0:50000->50000/tcp, :::50000->50000/tcp   jenkins
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ docker container stop jenkins 
+jenkins
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ docker ps 
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ docker container start jenkins 
+jenkins
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ ^C
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ 
+
+https://www.jenkins.io/doc/book/pipeline/syntax/
+https://www.jenkins.io/doc/pipeline/steps/workflow-basic-steps/

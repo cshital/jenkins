@@ -1,0 +1,16 @@
+# string Pramater code :
+
+pipeline {
+    agent any
+    parameters {
+        string(defaultValue: "Test", description: "Which enviorment to deploy in?", name: "deployEnv")
+    }
+    stages {
+        stage("Demo") {
+            steps {
+               echo "string is set to: ${params.deployEnv} "
+            }
+        }
+    }
+}
+

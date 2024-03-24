@@ -1,0 +1,72 @@
+# after all installations for run jenkins use this commands:
+
+
+
+Link : docker commands :
+   https://cdn.hostinger.com/tutorials/pdf/Docker-Cheat-Sheet.pdf?_gl=1*16oksth*_gcl_aw*R0NMLjE3MTA4MjY4NjIuQ2p3S0NBand6Ti12QmhBa0Vpd0FZaU83b0IwRXkyTVVzZHd4MFVlVThYd29jTW1Zb1pEVkRnQ2VnNzE4dU5NMmg2Smx3SGtmNkFfbi14b0Nsb01RQXZEX0J3RQ..*_gcl_au*Njk1Mjc4MjI3LjE3MTA4MjY4NTg.&_ga=2.209747797.1795393992.1710826860-1305496268.1710826860&_gac=1.188761817.1710826860.CjwKCAjwzN-vBhAkEiwAYiO7oB0Ey2MUsdwx0UeU8XwocMmYoZDVDgCeg718uNM2h6JlwHkf6A_n-xoCloMQAvD_BwE
+
+   
+einfochips@AHMLPT2509:~$ docker container start jenkins
+jenkins
+
+
+einfochips@AHMLPT2509:~$ cd docker/
+einfochips@AHMLPT2509:~/docker$ ls
+jenkins-compose
+einfochips@AHMLPT2509:~/docker$ cd jenkins-compose/
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ ls
+docker-compose.yaml
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ cat docker-compose.yaml 
+version: '3.7'                                                                                                               
+services:                                                                                                                    
+  jenkins:                                                                                                                   
+    image: jenkins/jenkins:lts    # Latest Version of Jenkins Image                                                          
+    privileged: true                                                                                                         
+    user: root    # Set Root user name of Jenkins                                                                            
+    ports:                                                                                                                   
+      - 8080:8080                                                                                                            
+      - 50000:50000                                                                                                          
+    container_name: jenkins   # Container name of Jenkins                                                                    
+    volumes:                                                                                                                 
+      - ~/jenkins_home:/var/jenkins_home                                                                                     
+      - /var/run/docker.sock:/var/run/docker.sock                                                                            
+      - /usr/local/bin/docker:/usr/local/bin/docker
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ 
+
+# check docker compose version :
+
+docker-compose --version
+
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ docker-compose --version
+docker-compose version 1.25.0, build unknown
+
+    docker --version
+    sudo systemctl start docker
+    sudo systemctl restart docker
+    sudo systemctl stop docker
+    sudo systemctl disable docker
+    sudo systemctl status docker
+    sudo systemctl enable docker
+    sudo usermod -a -G docker <username>
+    docker-compose --version
+
+# Compose file format : 
+   # docker version is available 2.0 t0 2.4  & 3.0 to 3.7
+# docker compose file is write .yaml format 
+default path for docker compose file .yaml 
+   docker-compose.yaml
+
+
+docker file is running one single commands on configure youre jenkins file .yaml formates
+
+
+# Runing jenkins with docker compose
+
+
+You can run a Jenkins controller with a single Docker command:
+
+$ docker run -it -p 8080:8080 jenkins/jenkins:lts
+
+   https://www.cloudbees.com/blog/how-to-install-and-run-jenkins-with-docker-compose#running-jenkins-with-docker-co
+
+

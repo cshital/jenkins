@@ -1,0 +1,38 @@
+# 75. If statements runing steps :
+
+1. create pipeline for if statement 
+
+2. slelect pipeline for if statement ---- then click ok
+
+3. create script pipeline run for if statement steps:
+
+//if statement code for script pipelines:
+
+
+pipeline {
+    agent any
+    parameters {
+        booleanParam(defaultValue: false, description: "Enable service?", name: "myBoolean")
+    }
+    stages {
+        stage("Demo") {
+            steps {
+                script {
+                    if(params.myBoolean == false) {
+                        currentBuild.result = "SUCCESS"
+                        return
+
+                    }
+                    else {
+                       echo "booleanParam is set to: TRUE" 
+                    }
+                }
+               }
+        }
+    }
+}
+
+4. click "Buid" Now
+
+5.Now go to "Build with parameters"
+

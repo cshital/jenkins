@@ -1,0 +1,15 @@
+install maven 
+
+docker conatiner ls 
+docker exec -it -u root d2efe275cf3b  /bin/bash
+
+einfochips@AHMLPT2509:~$ docker ps 
+CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS       PORTS                                                                                      NAMES
+d2efe275cf3b   jenkins/jenkins:lts   "/usr/bin/tini -- /u…"   19 hours ago   Up 2 hours   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 0.0.0.0:50000->50000/tcp, :::50000->50000/tcp   jenkins
+einfochips@AHMLPT2509:~$ ls
+Desktop  docker  Documents  Downloads  getting-started-app  install.sh  Music  Pictures  Public  snap  Templates  udemy-course  Videos
+einfochips@AHMLPT2509:~$ docker container ls
+CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS       PORTS                                                                                      NAMES
+d2efe275cf3b   jenkins/jenkins:lts   "/usr/bin/tini -- /u…"   23 hours ago   Up 5 hours   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 0.0.0.0:50000->50000/tcp, :::50000->50000/tcp   jenkins
+einfochips@AHMLPT2509:~$ docker exec -it -u root d2efe275cf3b  /bin/bash
+root@d2efe275cf3b:/# 

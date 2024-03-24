@@ -1,0 +1,53 @@
+# after all installations for run jenkins use this commands:
+
+einfochips@AHMLPT2509:~$ docker container start jenkins
+jenkins
+
+
+einfochips@AHMLPT2509:~$ cd docker/
+einfochips@AHMLPT2509:~/docker$ ls
+jenkins-compose
+einfochips@AHMLPT2509:~/docker$ cd jenkins-compose/
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ ls
+docker-compose.yaml
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ cat docker-compose.yaml 
+version: '3.7'                                                                                                               
+services:                                                                                                                    
+  jenkins:                                                                                                                   
+    image: jenkins/jenkins:lts    # Latest Version of Jenkins Image                                                          
+    privileged: true                                                                                                         
+    user: root    # Set Root user name of Jenkins                                                                            
+    ports:                                                                                                                   
+      - 8080:8080                                                                                                            
+      - 50000:50000                                                                                                          
+    container_name: jenkins   # Container name of Jenkins                                                                    
+    volumes:                                                                                                                 
+      - ~/jenkins_home:/var/jenkins_home                                                                                     
+      - /var/run/docker.sock:/var/run/docker.sock                                                                            
+      - /usr/local/bin/docker:/usr/local/bin/docker
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ 
+
+# check docker compose version :
+
+docker-compose --version
+
+einfochips@AHMLPT2509:~/docker/jenkins-compose$ docker-compose --version
+docker-compose version 1.25.0, build unknown
+
+    docker --version
+    sudo systemctl start docker
+    sudo systemctl restart docker
+    sudo systemctl stop docker
+    sudo systemctl disable docker
+    sudo systemctl status docker
+    sudo systemctl enable docker
+    sudo usermod -a -G docker <username>
+    docker-compose --version
+
+# Compose file format : 
+   # docker version is available 2.0 t0 2.4  & 3.0 to 3.7
+# docker compose file is write .yaml format 
+default path for docker compose file .yaml 
+   docker-compose.yaml
+
+

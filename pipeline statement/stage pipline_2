@@ -1,0 +1,48 @@
+# stage pipeline : 
+pipeline {
+    agent any
+    stages {
+     stage("Clean Up"){
+        steps{
+            deleteDir()
+        }
+     }
+     stage("Clone Repo"){
+        steps{
+             sh "git clone https://github.com/cshital/jenkins.git"
+
+        }
+     }
+   }
+}
+
+
+# output of sage pipelines: 
+
+Started by user shital
+Replayed #10
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/my pipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clean Up)
+[Pipeline] deleteDir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Clone Repo)
+[Pipeline] sh
++ git clone https://github.com/cshital/jenkins.git
+Cloning into 'jenkins'...
+warning: You appear to have cloned an empty repository.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+
+
+
+

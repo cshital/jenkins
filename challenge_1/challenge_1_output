@@ -1,0 +1,9 @@
+# challenge_1 output :
+
+Started by user shital
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/challenge_1
+[challenge_1] $ /bin/sh -xe /tmp/jenkins713540586049973275.sh
++ echo hello from challenge 1
+hello from challenge 1
+Finished: SUCCESS

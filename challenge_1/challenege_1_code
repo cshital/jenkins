@@ -1,0 +1,13 @@
+# challenge_1
+
+ 1) setup jenkins
+ 2) create job called: challenge 1
+ 3) Display "Hello From challenge 1
+ 
+ 
+ 1) select free style project 
+ 2) Buid steps Enviorment --- Build steps ---- Execute shell
+ 
+ # code challenge_1 :
+ 
+ echo "hello from challenge 1"

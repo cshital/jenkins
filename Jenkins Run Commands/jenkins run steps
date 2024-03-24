@@ -1,0 +1,14 @@
+# jenkins run steps :
+
+cd docker/
+
+/docker$ ls
+jenkins-compose
+
+/docker$ cd jenkins-compose/
+
+/docker/jenkins-compose$ docker container start jenkins
+jenkins
+
+/docker/jenkins-compose$ 
+

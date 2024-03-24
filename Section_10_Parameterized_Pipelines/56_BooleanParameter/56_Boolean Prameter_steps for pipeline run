@@ -1,0 +1,31 @@
+#56 Boolean Prameter :
+
+1. select Pipeline for new create pipeline
+ 
+2. Add pipeline Script.
+
+ # Boolean Pramater code :
+
+pipeline {
+    agent any
+    parameters {
+        booleanParam(defaultValue: false, description: "Enable service?", name: "myBoolean")
+    }
+    stages {
+        stage("Demo") {
+            steps {
+               echo "booleanParam is set to: ${params.myBoolean} "
+            }
+        }
+    }
+}
+
+
+
+3. then click Build Now 
+
+4. then select Boolean parameter select "default value"
+
+5. Enable service ?
+
+6. go to build with parameters "pipeline Boolpipeline"   ----- 	select "enable service" then click "build"

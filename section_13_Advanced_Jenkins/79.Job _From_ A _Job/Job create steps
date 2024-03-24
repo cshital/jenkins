@@ -1,0 +1,45 @@
+
+
+
+
+
+
+# Job From A Job run stpes :
+
+1. create pipeline from job from a job pipeline 
+
+2. create pipeline script 
+
+# pipeline script code :
+
+pipeline {
+    agent any
+    stages {
+        stage("Clean Up") {
+            steps {
+                deleteDir()
+
+            }
+        }
+        stage("Clone Repo") {
+            steps {
+                sh "git clone https://github.com/cshital/jenkins.git"
+            }
+        }
+        stage("Build") {
+            steps {
+                dir("simple-java-maven-app") {
+                    sh "mvn clean install"
+                }
+            }
+        }
+        stage("Build Remote") {
+            steps {
+           build 'boolPipeline'
+          }
+        }
+    }
+}
+
+
+3. click "Build" Now

@@ -1,0 +1,65 @@
+einfochips@AHMLPT2509:~$ sudo docker-compose up -d
+[sudo] password for einfochips: 
+einfochips@AHMLPT2509:~$ ^C
+einfochips@AHMLPT2509:~$ docker container start jenkins 
+jenkins
+einfochips@AHMLPT2509:~$ cd /var/
+einfochips@AHMLPT2509:/var$ ls
+backups  crash  local  log   metrics  run   spool
+cache    lib    lock   mail  opt      snap  tmp
+einfochips@AHMLPT2509:/var$ cd lib/
+einfochips@AHMLPT2509:/var/lib$ ls
+AccountsService      docker           misc            ubiquity
+acpi-support         dpkg             NetworkManager  ubuntu-advantage
+alsa                 emacsen-common   openvpn         ubuntu-drivers-common
+app-info             fprint           os-prober       ubuntu-release-upgrader
+apport               fwupd            PackageKit      ucf
+apt                  gdm3             pam             udisks2
+aspell               geoclue          plymouth        unattended-upgrades
+avahi-autoipd        ghostscript      polkit-1        update-manager
+bluetooth            git              private         update-notifier
+boltd                grub             python          upower
+BrlAPI               hp               sgml-base       usb_modeswitch
+colord               initramfs-tools  shim-signed     usbutils
+command-not-found    ispell           snapd           vim
+containerd           libreoffice      snmp            whoopsie
+dbus                 locales          sudo            xfonts
+dhcp                 logrotate        systemd         xkb
+dictionaries-common  man-db           tpm             xml-core
+einfochips@AHMLPT2509:/var/lib$ ls grep jenkins
+ls: cannot access 'grep': No such file or directory
+ls: cannot access 'jenkins': No such file or directory
+einfochips@AHMLPT2509:/var/lib$ ls grep |jenkins
+ls: cannot access 'grep': No such file or directory
+jenkins: command not found
+einfochips@AHMLPT2509:/var/lib$ ls grep | jenkins
+ls: cannot access 'grep': No such file or directory
+jenkins: command not found
+einfochips@AHMLPT2509:/var/lib$ ls grep | jenkins
+ls: cannot access 'grep': No such file or directory
+jenkins: command not found
+einfochips@AHMLPT2509:/var/lib$ cd docker/
+bash: cd: docker/: Permission denied
+einfochips@AHMLPT2509:/var/lib$ cd
+einfochips@AHMLPT2509:~$ docker exec -it jenkins bash
+root@d2efe275cf3b:/# ls
+bin  boot  dev	etc  home  lib	lib64  media  mnt  opt	proc  root  run  sbin  srv  sys  tmp  usr  var
+root@d2efe275cf3b:/# pwd
+/
+root@d2efe275cf3b:/# cd var/
+root@d2efe275cf3b:/var# ls
+backups  cache	jenkins_home  lib  local  lock	log  mail  opt	run  spool  tmp
+root@d2efe275cf3b:/var# cat jenkins_home/
+cat: jenkins_home/: Is a directory
+root@d2efe275cf3b:/var# cd jenkins_home/
+root@d2efe275cf3b:/var/jenkins_home# ls
+caches						jenkins.telemetry.Correlator.xml			   secret.key
+config.xml					jobs							   secret.key.not-so-secret
+copy_reference_file.log				logs							   secrets
+hudson.model.UpdateCenter.xml			nodeMonitors.xml					   updates
+hudson.plugins.git.GitTool.xml			nodes							   userContent
+identity.key.enc				org.jenkinsci.plugins.workflow.flow.FlowExecutionList.xml  users
+jenkins.install.InstallUtil.lastExecVersion	plugins							   war
+jenkins.install.UpgradeWizard.state		queue.xml						   workspace
+jenkins.model.JenkinsLocationConfiguration.xml	queue.xml.bak
+root@d2efe275cf3b:/var/jenkins_home# 

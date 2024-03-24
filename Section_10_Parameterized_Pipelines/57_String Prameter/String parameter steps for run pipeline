@@ -1,0 +1,36 @@
+# String parameter : 
+     
+    Resorce Link : https://github.com/jenkinsci/pipeline-model-definition-plugin/wiki/Parametrized-pipelines
+
+
+1. select Pipeline for new create pipeline
+ 
+2. Add pipeline Script.
+
+ # string Pramater code :
+
+pipeline {
+    agent any
+    parameters {
+        string(defaultValue: "Test", description: "Which enviorment to deploy in?", name: "deployEnv")
+    }
+    stages {
+        stage("Demo") {
+            steps {
+               echo "string is set to: ${params.deployEnv} "
+            }
+        }
+    }
+}
+
+
+3. then click Build Now 
+
+4. after build got to "Build with parameters"
+
+5. then got to Pipeline stringPipeline
+
+6. deployEnv ---- which enviorment to deploy in? ----- then "Test" click now Build.
+
+7. which parameter used in Build --- click build number and then click parameter and then show parameter is used in runtime build.
+

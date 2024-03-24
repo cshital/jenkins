@@ -1,0 +1,15 @@
+# Dropdown Selection Parameters code :
+
+pipeline {
+    agent any
+    parameters {
+        choice(choices: ["Test", "Dev", "QA", "PRE-PROD", "PROD"], description: "Which enviorment to deploy in?", name: "deployEnv")
+    }
+    stages {
+        stage("Demo") {
+            steps {
+               echo "Choice is set to: ${params.deployEnv} "
+            }
+        }
+    }
+}       

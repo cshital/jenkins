@@ -1,0 +1,24 @@
+# Environment Variables runing steps:
+
+  # Resource link: https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#using-environment-variables
+ 
+ 1. create pipeline for environment variables
+
+ 2. select pipline --- then click ok
+
+ 3. create script pipeline for environment variable:
+
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
+    }
+}
+
+4. clieck "Build"
+
+5. check Build output

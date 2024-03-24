@@ -1,0 +1,26 @@
+# 76. Functions script pipeline Run steps :
+
+1. create pipeline for Functions
+
+2. select pipeline for Functions--- click ok
+
+3. create pipeline script for Functions :
+
+// pipeline {
+    agent any 
+    
+    stages {
+        stage("Demo") {
+            steps {
+                myFunc("Hello from the demo stage!")
+
+            }
+        }
+    }
+}
+
+def myFunc(String myText) {
+    echo "myText is set to: ${myText}"
+}
+
+4. Click on "Build" Now

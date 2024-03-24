@@ -1,0 +1,182 @@
+# jenkins installation 
+
+sudo apt install gnome-terminal
+
+sudo apt-get update
+ sudo apt-get install ./docker-desktop-<version>-<arch>.deb
+
+
+
+# Install Docker Engine on Ubuntu :
+   https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+
+ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+ sudo apt-get update
+
+ sudo apt-get install ca-certificates curl
+
+ sudo install -m 0755 -d /etc/apt/keyrings
+
+ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+
+# Add the repository to Apt sources:
+
+echo \
+
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+docker --version
+
+sudo docker run hello-world
+
+sudo service docker start
+
+sudo service docker status 
+
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk17
+
+      // Jenkins install port : localhost:8080
+
+      set password on jenkins 
+
+ install jenkins pluging 
+
+
+
+https://github.com/jenkinsci/docker
+
+
+Link for the code to the course: https://github.com/addamstj/Jenkins-Course
+
+If you run into any error with the code you've created, be sure to check it with the code on GitHub and compare to see where the error might be occurring.
+
+https://github.com/addamstj/Jenkins-Course/tree/master/challenge3
+
+
+
+
+To install Jenkins using Docker Compose via the command line interface (CLI), you need to follow these steps:
+
+Install Docker: Ensure you have Docker installed on your system. You can find instructions for installing Docker on your specific platform on the Docker website.
+
+Create Docker Compose file: Create a docker-compose.yml file in your desired directory. This file will contain the configuration for 
+Jenkins and any other services you may need. Here's a simple example:
+
+
+
+sudo apt update
+sudo apt install docker-compose
+
+docker-compose --version
+sudo systemctl start docker
+docker info
+sudo usermod -aG docker $USER
+
+
+  // sudo nano docker-compose.yml
+
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - jenkins-net
+volumes:
+  jenkins_home:
+networks:
+  jenkins-net:
+
+
+
+This Compose file defines a service called "jenkins", uses the official Jenkins Docker image, maps port 8080 of the host to port 8080 of the container (the default Jenkins web interface port), mounts a volume for Jenkins data persistence, and specifies a custom network.
+
+Run Docker Compose: Open your terminal, navigate to the directory containing the docker-compose.yml file, and run the following command:
+
+
+
+sudo apt update
+sudo apt install docker-compose
+
+http://localhost:8080
+
+
+
+sudo docker-compose down
+docker-compose logs jenkins
+
+
+after create jenkins using docker compose file how to login stpes by steps
+ChatGPT
+To login to Jenkins after creating it using a Docker Compose file, you typically follow these steps:
+
+Start Docker Containers: Make sure your Docker Compose file is configured correctly and execute the command to start the containers. If your Docker Compose file is named docker-compose.yml, you can start Jenkins using:
+
+Copy code
+docker-compose up -d
+The -d flag runs the containers in the background.
+
+Wait for Jenkins to Start: It might take a minute or so for Jenkins to fully start up, especially if it's the first time.
+
+Access Jenkins in your Web Browser: Once Jenkins is running, you can access it via a web browser. By default, Jenkins runs on port 8080. Open your web browser and go to:
+
+arduino
+Copy code
+http://localhost:8080
+If you're running Docker on a remote server or a different port, replace localhost with the appropriate IP address or hostname, and adjust the port if necessary.
+
+Unlock Jenkins: When you access Jenkins for the first time, you will be prompted to unlock it. You'll need to retrieve the initial administrator password from the Jenkins container logs.
+
+Run the following command to view the logs:
+
+Copy code
+docker-compose logs jenkins
+Look for a line similar to this:
+
+markdown
+Copy code
+jenkins_1  | *************************************************************
+jenkins_1  | *************************************************************
+jenkins_1  | *************************************************************
+
+jenkins_1  | Jenkins initial setup is required. An admin user has been created and a password generated.
+jenkins_1  | Please use the following password to proceed to installation:
+
+jenkins_1  | <your_initial_admin_password>
+
+jenkins_1  | This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+jenkins_1  | *************************************************************
+jenkins_1  | *************************************************************
+jenkins_1  | *************************************************************
+Copy the <your_initial_admin_password> from the logs.
+
+Paste the Admin Password: Back in your web browser, paste the initial administrator password into the corresponding field and click "Continue".
+
+Customize Jenkins (Optional): You can choose whether to install suggested plugins or select plugins manually. You can also skip this step and install plugins later.
+
+Create an Admin User: After selecting plugins, you will be prompted to create an admin user. Fill in the required information and click "Save and Finish".
+
+Start Using Jenkins: Once the setup is complete, Jenkins will be ready for use. You can start creating jobs, pipelines, and managing your CI/CD workflows.
+
+That's it! You've successfully logged in to Jenkins running via Docker Compose.
+
+
+
+

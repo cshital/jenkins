@@ -1,0 +1,26 @@
+# Dropdown Selection Parameters :
+
+
+1. select Pipeline for new create pipeline
+ 
+2. Add pipeline Script.
+
+3.  Dropdown Selection Parameter code :
+
+  
+  pipeline {
+    agent any
+    parameters {
+        choice(choices: ["Test", "Dev", "QA", "PRE-PROD", "PROD"], description: "Which enviorment to deploy in?", name: "deployEnv")
+    }
+    stages {
+        stage("Demo") {
+            steps {
+               echo "Choice is set to: ${params.deployEnv} "
+            }
+        }
+    }
+}       
+
+
+4.then click Build Now 
